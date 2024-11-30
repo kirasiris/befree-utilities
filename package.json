@@ -1,0 +1,27 @@
+{
+  "name": "befree-utilities",
+  "version": "1.0.0",
+  "description": "This npm library will be of personal use. However, it can be useful for external developers as well. It will receive new features with time depending on my needs",
+  "private": "false",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "javascript",
+    "utilities"
+  ],
+  "author": "Kevin Uriel Fonseca",
+  "license": "MIT",
+  "bugs": {
+    "email": "kebin1421@hotmail.com",
+    "url": "https://github.com/kirasiris/befree-utilities/issues"
+  },
+  "homepage": "https://github.com/kirasiris/befree-utilities#readme",
+  "dependencies": {}
+}
