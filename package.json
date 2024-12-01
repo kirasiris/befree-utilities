@@ -1,8 +1,8 @@
 {
   "name": "befree-utilities",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This npm library will be of personal use. However, it can be useful for external developers as well. It will receive new features with time depending on my needs",
-  "private": "false",
+  "private": false,
   "main": "build/index.js",
   "type": "module",
   "types": "build/index.d.ts",
@@ -20,23 +20,27 @@
   },
   "keywords": [
     "javascript",
-    "utilities"
+    "utilities",
+    "string-manipulation",
+    "strings",
+    "string",
+    "date-manipulation"
   ],
   "author": "Kevin Uriel Fonseca",
   "license": "GPL-2.0-only",
   "bugs": {
-    "email": "kebin1421@hotmail.com",
-    "url": "https://github.com/kirasiris/befree-utilities/issues"
+    "url": "https://github.com/kirasiris/befree-utilities/issues",
+    "email": "kebin1421@hotmail.com"
   },
   "homepage": "https://github.com/kirasiris/befree-utilities#readme",
+  "dependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "babel-jest": "^29.7.0"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "jest": "^29.7.0",
     "ts-jest": "^29.2.5",
     "typescript": "^5.7.2"
-  },
-  "dependencies": {
-    "@babel/preset-env": "^7.26.0",
-    "babel-jest": "^29.7.0"
   }
 }
