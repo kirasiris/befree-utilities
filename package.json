@@ -1,18 +1,23 @@
 {
   "name": "befree-utilities",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "This npm library will be of personal use. However, it can be useful for external developers as well. It will receive new features with time depending on my needs",
   "private": false,
   "main": "build/index.js",
+  "module": "build/index.js",
   "type": "module",
   "types": "build/index.d.ts",
+  "exports": {
+    "require": "./build/cjs/index.js",
+    "import": "./build/esm/index.js"
+  },
   "files": [
     "build",
     "README.md"
   ],
   "scripts": {
     "test": "jest",
-    "build": "npx tsc"
+    "build": "npx tsc -p tsconfig.esm.json && npx tsc -p tsconfig.cjs.json"
   },
   "repository": {
     "type": "git",
