@@ -1,0 +1,29 @@
+{
+    "exclude": [
+        "node_modules",
+        "build"
+    ],
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "__tests__/**/*.ts",
+        "__tests__/**/*.tsx",
+        "src/**/*.js" // Include JavaScript files
+    ],
+    "compilerOptions": {
+        "lib": [
+            "ESNext",
+            "DOM" // If you're using DOM APIs (like document, window, etc.)
+        ],
+        "module": "ESNext", // Ensures ES Modules output
+        "target": "ESNext", // Allows modern ECMAScript features
+        "esModuleInterop": true, // Ensures compatibility between CommonJS and ESM
+        "moduleResolution": "node", // Resolves modules the way Node.js does
+        "outDir": "build", // Directory for the build output
+        "jsx": "react", // JSX support (if using React)
+        "skipLibCheck": true, // Skips checking of declaration files for faster builds
+        "strict": true, // Enable strict mode for better type safety
+        "allowSyntheticDefaultImports": true, // Allows default imports from CommonJS modules
+        "allowJs": true, // Allows importing JavaScript files
+    }
+}
