@@ -1,7 +1,3 @@
-# Pre-requisites
-
-NOT YET READY TO USE...SORRY!
-
 ## Install
 
 ```
@@ -13,8 +9,78 @@ npm i befree-utilities
 This npm library will be of personal use. However, it can be useful for external developers as well. It will receive new features with time depending on my needs
 
 ## Usage
+##### Currency manipulation
+```js
+import { currencyFormatter, stripeCurrencyFormatter } from "befree-utilities";
 
-TO UPDATE
+// Description: Formats a number directly into a localized currency string
+// Input example: currencyFormatter(12345.56, "USD");
+// Output example: "$1, 234.56"
+console.log('Result of currency formatter:', currencyFormatter(12345.56, "USD"));
+
+// Description:  Formats a number given in the smallest currency format unit (e.g., cents) into a localized currency string
+// Input example: stripeCurrencyFormatter(1234556, "USD");
+// Output example: "$1, 234.56"
+console.log('Result of Stripe currency formatter:', stripeCurrencyFormatter(1234556, "USD"));
+```
+
+##### Data type manipulation
+```js
+import { base64toBlob } from "befree-utilities";
+
+// Description: Converts a base64-encoded string into a binary blob and
+// optionally creates a File object and a url for the blob
+// Input example: const file = base64toBlob(iVBORw0KGgoAAAANSUhEUgAAAAUA...); // (truncated Base64 string for brevity)
+// Output example:
+// console.log(file);
+// {
+//   blob: Blob { size: 522, type: "" }, //  Binary blob representation
+//   file: File { name: "fiename.jpg", size: 522, type: "image/jpg" }
+//   url: "blob:http://example/com/abc123" // Object Url for the blob
+// }
+
+const file = base64toBlob("iVBORw0KGgoAAAANSUhEUgAAAAUA..."); // (truncated Base64 string for brevity)
+console.log('Result of base64toBlob:', file);
+```
+
+##### Date manipulation
+```js
+import { calculateTimeSincePublished, formatDateWithoutTime } from "befree-utilities";
+
+// Description: Calculates the time elapsed since a given date and returns it as a human-readable string
+// Input example: calculateTimeSincePublished("2024-11-28T10:00:00Z");
+// Output example: "2 days ago"
+console.log(calculateTimeSincePublished("2024-11-28T10:00:00Z"));
+
+// Description: Formats a given date into a human-readable string, showing only the date without the time
+// Input example: formatDateWithoutTime("2024-11-28T10:00:00Z");
+// Output example: "11/28/2024" // (for en-US locale)
+console.log(formatDateWithoutTime("2024-11-28T10:00:00Z"));
+```
+
+##### Object manipulation
+```js
+import { checkEmptyObject } from "befree-utilities";
+
+// Description: Checks if an object is empty (i.e., has no own properties) and returns true if it is empty, otherwise false.
+// Input example:
+//   checkEmptyObject({}); // Empty object
+//   checkEmptyObject({ key: "value" }); // Non-empty object
+// Output example:
+//   true fo the empty object
+//   false for the object with properties
+console.log(checkEmptyObject({}));
+```
+
+##### String manipulation
+```js
+import { capitalizeWordsInArray } from "befree-utilities";
+
+// Description: Take an array of words and returns a new array where each word is capitalized
+// Input example: capitalizeWordsInArray(["hello", "world", "JAVASCRIPT", ""]);
+// Output example: ["Hello", "World", "Javascript"]
+console.log(capitalizeWordsInArray(["hello", "world", "JAVASCRIPT", ""]))
+```
 
 ## Community
 
@@ -55,4 +121,4 @@ A list of co-authors that have helped improve this amazing library!
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-[![All Contributors](https://img.shields.io/github/all-contributors/kirasiris/import-alias-file?color=ee8449&style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/github/all-contributors/kirasiris/befree-utilities?color=ee8449&style=flat-square)](#contributors)
